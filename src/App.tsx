@@ -2,8 +2,6 @@ import React from "react";
 import ProductCard from "./components/ProductCard";
 import { Product } from "./types/Product";
 
-// Datos gestionados en el componente padre
-// Imágenes de suplementos/jarabes desde URLs externas
 const productos: Product[] = [
   {
     id: 1,
@@ -78,13 +76,6 @@ const App: React.FC = () => {
         Grilla de Productos
       </h1>
 
-      {/*
-        Grilla Mobile First con CSS Grid:
-        - Móvil portrait:   1 columna  (default)
-        - Móvil landscape:  2 columnas (sm:)
-        - Tablet portrait:  3 columnas (md:)
-        - Tablet landscape / PC: 4+ columnas (lg: / xl:)
-      */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 max-w-7xl mx-auto">
         {productos.map((product) => (
           // Componente hijo recibe los datos desde el padre via props
